@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    transition: 0.1s ease;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(163, 245, 245);
+}
+
+/*
+אני לא כל כך מבסוט מהביצוע שלי.
+אני חושב שהעניין של לעשות את הגובה המקסימלי 
+של הקונטיינר לפי מידה כזו זה לא טובתי אני
+ רוצה להבין כיצד אני יכול לייעל את זה לפי פרופרטי שהוא עקבי 
+ */
+
+.container {
+    max-height: 62.5vh;
+    background-color: darkslategrey;
+    border: black solid 3px;
+    display: flex;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item {
+    flex-shrink: 0;
+    flex-grow: 1;
+    background-color: rgb(50, 238, 144);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: black solid 2px;
+    min-width: 200px;
+    min-height: 200px;
+    flex-basis: 200px;
+}
+
