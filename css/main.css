@@ -1,0 +1,155 @@
+:root {
+    --margin-block-start: 3%;
+}
+
+* {
+    box-sizing: border-box;
+    transform: transform 0.5s ease-in-out;
+}
+
+body {
+    display: flex;
+    /* justify-content: center; */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    min-height: 100vh;
+    margin: 2%;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 80vw;
+    height: 80vh;
+}
+
+.heder,
+.footer {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 8vh;
+    border-radius: 30px;
+    background-color: aqua;
+    margin-block-start: var(--margin-block-start);
+
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+main {
+    display: flex;
+    height: 30vh;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(6, 48, 184);
+    margin-block-start: var(--margin-block-start);
+}
+
+.side-wrapper {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+}
+
+aside {
+    display: flex;
+    min-height: 10vh;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(238, 156, 49);
+    margin-block-start: var(--margin-block-start);
+}
+
+.ad {
+    display: flex;
+    min-height: 10vh;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(223, 82, 0);
+    margin-block-start: var(--margin-block-start);
+}
+
+
+/* It's bigger than this grow to tablet */
+@media (width >=768px) {
+
+    .main-wrapper {
+        margin-block-start:0;
+        padding: 2%;
+    }
+
+    .side-wrapper {
+        flex-direction: row;
+        width: 100%;
+    }
+    main{
+        margin-block-start:0;
+
+    }
+
+    .ad {
+        order: 1;
+        width: 30%;
+    }
+
+    aside {
+        order: 2;
+        width: 70%;
+        margin-inline-start: 2%;
+    }
+
+    .heder,
+.footer {
+    margin-block-start: 0;
+
+}
+
+}
+
+
+/* If bigger than this grow to desktop. */
+@media (width >=992px) {
+    .main-wrapper {
+        flex-direction: row;
+        padding: 1.5%;
+
+    }
+
+    main {
+        margin-block-start: 0;
+        order: 2;
+        width: 70%;
+    }
+
+    .side-wrapper {
+        order: 1;
+        flex-direction: column;
+        width: 30%;
+        margin-inline-end: 2%;
+    }
+
+
+    .ad {
+        order: 2;
+        width: 100%;
+        height: 30%;
+    }
+
+    aside {
+        margin-inline-start: 0;
+        order: 1;
+        height: 70%;
+        width: 100%;
+    }
+
+}
